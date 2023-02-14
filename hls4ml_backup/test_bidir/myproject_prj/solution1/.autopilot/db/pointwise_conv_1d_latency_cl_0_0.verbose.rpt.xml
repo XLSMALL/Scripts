@@ -1,0 +1,229 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'pointwise_conv_1d_latency_cl_0_0'" level="0">
+<item name = "Date">Mon Jan 30 18:29:00 2023
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">myproject_prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 3.903 ns, 0.62 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">3, 3, 15.000 ns, 15.000 ns, 1, 1, function</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 275, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 20, 1340, 40, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 45, -</column>
+<column name="Register">-, -, 951, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 9, 2, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="myproject_mul_16s_11ns_26_2_0_U211">myproject_mul_16s_11ns_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_11ns_26_2_0_U213">myproject_mul_16s_11ns_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_11ns_26_2_0_U215">myproject_mul_16s_11ns_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_11ns_26_2_0_U217">myproject_mul_16s_11ns_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_11ns_26_2_0_U218">myproject_mul_16s_11ns_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_11ns_26_2_0_U219">myproject_mul_16s_11ns_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_11ns_26_2_0_U224">myproject_mul_16s_11ns_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_11ns_26_2_0_U225">myproject_mul_16s_11ns_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_11ns_26_2_0_U226">myproject_mul_16s_11ns_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_11ns_26_2_0_U229">myproject_mul_16s_11ns_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_11s_26_2_0_U214">myproject_mul_16s_11s_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_11s_26_2_0_U216">myproject_mul_16s_11s_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_11s_26_2_0_U221">myproject_mul_16s_11s_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_11s_26_2_0_U222">myproject_mul_16s_11s_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_11s_26_2_0_U227">myproject_mul_16s_11s_26_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_9ns_25_2_0_U210">myproject_mul_16s_9ns_25_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_9ns_25_2_0_U212">myproject_mul_16s_9ns_25_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_9ns_25_2_0_U220">myproject_mul_16s_9ns_25_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_9ns_25_2_0_U223">myproject_mul_16s_9ns_25_2_0, 0, 1, 67, 2, 0</column>
+<column name="myproject_mul_16s_9ns_25_2_0_U228">myproject_mul_16s_9ns_25_2_0, 0, 1, 67, 2, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln703_10_fu_1966_p2">+, 0, 0, 23, 16, 16</column>
+<column name="add_ln703_11_fu_2024_p2">+, 0, 0, 16, 16, 16</column>
+<column name="add_ln703_12_fu_2029_p2">+, 0, 0, 16, 16, 16</column>
+<column name="add_ln703_13_fu_1970_p2">+, 0, 0, 23, 16, 16</column>
+<column name="add_ln703_14_fu_2034_p2">+, 0, 0, 16, 16, 16</column>
+<column name="add_ln703_1_fu_1954_p2">+, 0, 0, 23, 16, 16</column>
+<column name="add_ln703_2_fu_1994_p2">+, 0, 0, 16, 16, 16</column>
+<column name="add_ln703_3_fu_1999_p2">+, 0, 0, 16, 16, 16</column>
+<column name="add_ln703_4_fu_1958_p2">+, 0, 0, 23, 16, 16</column>
+<column name="add_ln703_5_fu_2004_p2">+, 0, 0, 16, 16, 16</column>
+<column name="add_ln703_6_fu_2009_p2">+, 0, 0, 16, 16, 16</column>
+<column name="add_ln703_7_fu_1962_p2">+, 0, 0, 23, 16, 16</column>
+<column name="add_ln703_8_fu_2014_p2">+, 0, 0, 16, 16, 16</column>
+<column name="add_ln703_9_fu_2019_p2">+, 0, 0, 16, 16, 16</column>
+<column name="add_ln703_fu_1989_p2">+, 0, 0, 16, 16, 16</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_return_0">9, 2, 16, 32</column>
+<column name="ap_return_1">9, 2, 16, 32</column>
+<column name="ap_return_2">9, 2, 16, 32</column>
+<column name="ap_return_3">9, 2, 16, 32</column>
+<column name="ap_return_4">9, 2, 16, 32</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln703_10_reg_2309">16, 0, 16, 0</column>
+<column name="add_ln703_13_reg_2314">16, 0, 16, 0</column>
+<column name="add_ln703_1_reg_2294">16, 0, 16, 0</column>
+<column name="add_ln703_4_reg_2299">16, 0, 16, 0</column>
+<column name="add_ln703_7_reg_2304">16, 0, 16, 0</column>
+<column name="ap_ce_reg">1, 0, 1, 0</column>
+<column name="ap_return_0_int_reg">16, 0, 16, 0</column>
+<column name="ap_return_1_int_reg">16, 0, 16, 0</column>
+<column name="ap_return_2_int_reg">16, 0, 16, 0</column>
+<column name="ap_return_3_int_reg">16, 0, 16, 0</column>
+<column name="ap_return_4_int_reg">16, 0, 16, 0</column>
+<column name="data_0_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_10_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_11_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_12_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_13_V_read_1_reg_2074">16, 0, 16, 0</column>
+<column name="data_13_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_14_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_15_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_16_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_17_V_read_1_reg_2069">16, 0, 16, 0</column>
+<column name="data_17_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_18_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_19_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_1_V_read_3_reg_2089">16, 0, 16, 0</column>
+<column name="data_1_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_2_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_3_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_4_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_5_V_read_2_reg_2084">16, 0, 16, 0</column>
+<column name="data_5_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_6_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_7_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_8_V_read_int_reg">16, 0, 16, 0</column>
+<column name="data_9_V_read_1_reg_2079">16, 0, 16, 0</column>
+<column name="data_9_V_read_int_reg">16, 0, 16, 0</column>
+<column name="trunc_ln708_10_reg_2224">16, 0, 16, 0</column>
+<column name="trunc_ln708_11_reg_2229">15, 0, 15, 0</column>
+<column name="trunc_ln708_11_reg_2229_pp0_iter2_reg">15, 0, 15, 0</column>
+<column name="trunc_ln708_12_reg_2284">16, 0, 16, 0</column>
+<column name="trunc_ln708_13_reg_2239">16, 0, 16, 0</column>
+<column name="trunc_ln708_14_reg_2244">16, 0, 16, 0</column>
+<column name="trunc_ln708_15_reg_2249">15, 0, 15, 0</column>
+<column name="trunc_ln708_15_reg_2249_pp0_iter2_reg">15, 0, 15, 0</column>
+<column name="trunc_ln708_16_reg_2289">16, 0, 16, 0</column>
+<column name="trunc_ln708_17_reg_2259">16, 0, 16, 0</column>
+<column name="trunc_ln708_18_reg_2264">16, 0, 16, 0</column>
+<column name="trunc_ln708_1_reg_2269">16, 0, 16, 0</column>
+<column name="trunc_ln708_2_reg_2179">16, 0, 16, 0</column>
+<column name="trunc_ln708_3_reg_2184">16, 0, 16, 0</column>
+<column name="trunc_ln708_4_reg_2189">15, 0, 15, 0</column>
+<column name="trunc_ln708_4_reg_2189_pp0_iter2_reg">15, 0, 15, 0</column>
+<column name="trunc_ln708_5_reg_2274">16, 0, 16, 0</column>
+<column name="trunc_ln708_6_reg_2199">16, 0, 16, 0</column>
+<column name="trunc_ln708_7_reg_2204">16, 0, 16, 0</column>
+<column name="trunc_ln708_8_reg_2209">15, 0, 15, 0</column>
+<column name="trunc_ln708_8_reg_2209_pp0_iter2_reg">15, 0, 15, 0</column>
+<column name="trunc_ln708_9_reg_2279">16, 0, 16, 0</column>
+<column name="trunc_ln708_s_reg_2219">16, 0, 16, 0</column>
+<column name="trunc_ln_reg_2169">15, 0, 15, 0</column>
+<column name="trunc_ln_reg_2169_pp0_iter2_reg">15, 0, 15, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, pointwise_conv_1d_latency_cl.0.0, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, pointwise_conv_1d_latency_cl.0.0, return value</column>
+<column name="ap_return_0">out, 16, ap_ctrl_hs, pointwise_conv_1d_latency_cl.0.0, return value</column>
+<column name="ap_return_1">out, 16, ap_ctrl_hs, pointwise_conv_1d_latency_cl.0.0, return value</column>
+<column name="ap_return_2">out, 16, ap_ctrl_hs, pointwise_conv_1d_latency_cl.0.0, return value</column>
+<column name="ap_return_3">out, 16, ap_ctrl_hs, pointwise_conv_1d_latency_cl.0.0, return value</column>
+<column name="ap_return_4">out, 16, ap_ctrl_hs, pointwise_conv_1d_latency_cl.0.0, return value</column>
+<column name="ap_ce">in, 1, ap_ctrl_hs, pointwise_conv_1d_latency_cl.0.0, return value</column>
+<column name="data_0_V_read">in, 16, ap_none, data_0_V_read, scalar</column>
+<column name="data_1_V_read">in, 16, ap_none, data_1_V_read, scalar</column>
+<column name="data_2_V_read">in, 16, ap_none, data_2_V_read, scalar</column>
+<column name="data_3_V_read">in, 16, ap_none, data_3_V_read, scalar</column>
+<column name="data_4_V_read">in, 16, ap_none, data_4_V_read, scalar</column>
+<column name="data_5_V_read">in, 16, ap_none, data_5_V_read, scalar</column>
+<column name="data_6_V_read">in, 16, ap_none, data_6_V_read, scalar</column>
+<column name="data_7_V_read">in, 16, ap_none, data_7_V_read, scalar</column>
+<column name="data_8_V_read">in, 16, ap_none, data_8_V_read, scalar</column>
+<column name="data_9_V_read">in, 16, ap_none, data_9_V_read, scalar</column>
+<column name="data_10_V_read">in, 16, ap_none, data_10_V_read, scalar</column>
+<column name="data_11_V_read">in, 16, ap_none, data_11_V_read, scalar</column>
+<column name="data_12_V_read">in, 16, ap_none, data_12_V_read, scalar</column>
+<column name="data_13_V_read">in, 16, ap_none, data_13_V_read, scalar</column>
+<column name="data_14_V_read">in, 16, ap_none, data_14_V_read, scalar</column>
+<column name="data_15_V_read">in, 16, ap_none, data_15_V_read, scalar</column>
+<column name="data_16_V_read">in, 16, ap_none, data_16_V_read, scalar</column>
+<column name="data_17_V_read">in, 16, ap_none, data_17_V_read, scalar</column>
+<column name="data_18_V_read">in, 16, ap_none, data_18_V_read, scalar</column>
+<column name="data_19_V_read">in, 16, ap_none, data_19_V_read, scalar</column>
+</table>
+</item>
+</section>
+</profile>

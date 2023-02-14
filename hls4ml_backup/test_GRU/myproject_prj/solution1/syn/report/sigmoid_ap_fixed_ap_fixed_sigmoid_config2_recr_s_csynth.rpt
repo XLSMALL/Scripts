@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vivado HLS Report for 'sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s'
+================================================================
+* Date:           Fri Jan 13 14:29:35 2023
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.022 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    272|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        1|      -|       0|      0|    -|
+|Multiplexer      |        -|      -|       -|      -|    -|
+|Register         |        -|      -|      74|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        1|      0|      74|    272|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |    ~0   |      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +------------------+--------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |      Memory      |                            Module                            | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +------------------+--------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |sigmoid_table2_U  |sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s_sigmoid_bkb  |        1|  0|   0|    0|  1024|   10|     1|        10240|
+    +------------------+--------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total             |                                                              |        1|  0|   0|    0|  1024|   10|     1|        10240|
+    +------------------+--------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------+----------+-------+---+----+------------+------------+
+    |        Variable Name        | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------+----------+-------+---+----+------------+------------+
+    |add_ln147_1_fu_295_p2        |     +    |      0|  0|  17|          10|          13|
+    |add_ln147_2_fu_246_p2        |     +    |      0|  0|  12|          10|          12|
+    |add_ln147_3_fu_300_p2        |     +    |      0|  0|  12|          10|          12|
+    |add_ln147_fu_241_p2          |     +    |      0|  0|  17|          10|          13|
+    |add_ln700_1_fu_215_p2        |     +    |      0|  0|  17|           1|          13|
+    |add_ln700_fu_143_p2          |     +    |      0|  0|  17|           1|          13|
+    |ap_block_pp0_stage0_11001    |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln149_1_fu_335_p2       |   icmp   |      0|  0|   8|           2|           1|
+    |icmp_ln149_fu_281_p2         |   icmp   |      0|  0|   8|           2|           1|
+    |icmp_ln850_1_fu_191_p2       |   icmp   |      0|  0|  18|          26|           5|
+    |icmp_ln850_fu_119_p2         |   icmp   |      0|  0|  18|          26|           5|
+    |icmp_ln851_1_fu_209_p2       |   icmp   |      0|  0|  13|          10|           1|
+    |icmp_ln851_fu_137_p2         |   icmp   |      0|  0|  13|          10|           1|
+    |ap_block_pp0_stage0_subdone  |    or    |      0|  0|   2|           1|           1|
+    |select_ln148_1_fu_313_p3     |  select  |      0|  0|  12|           1|           1|
+    |select_ln148_fu_259_p3       |  select  |      0|  0|  12|           1|           1|
+    |select_ln149_1_fu_341_p3     |  select  |      0|  0|  10|           1|           2|
+    |select_ln149_fu_287_p3       |  select  |      0|  0|  10|           1|           2|
+    |select_ln850_1_fu_229_p3     |  select  |      0|  0|  13|           1|          13|
+    |select_ln850_fu_157_p3       |  select  |      0|  0|  13|           1|          13|
+    |select_ln851_1_fu_221_p3     |  select  |      0|  0|  13|           1|          13|
+    |select_ln851_fu_149_p3       |  select  |      0|  0|  13|           1|          13|
+    |ap_enable_pp0                |    xor   |      0|  0|   2|           1|           2|
+    +-----------------------------+----------+-------+---+----+------------+------------+
+    |Total                        |          |      0|  0| 272|         129|         152|
+    +-----------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3  |   1|   0|    1|          0|
+    |select_ln149_1_reg_402   |  10|   0|   10|          0|
+    |select_ln149_reg_397     |  10|   0|   10|          0|
+    |select_ln850_1_reg_387   |  13|   0|   13|          0|
+    |select_ln850_reg_377     |  13|   0|   13|          0|
+    |trunc_ln147_1_reg_392    |  12|   0|   12|          0|
+    |trunc_ln147_reg_382      |  12|   0|   12|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  74|   0|   74|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------+-----+-----+------------+-------------------------------------------------+--------------+
+|   RTL Ports   | Dir | Bits|  Protocol  |                  Source Object                  |    C Type    |
++---------------+-----+-----+------------+-------------------------------------------------+--------------+
+|ap_clk         |  in |    1| ap_ctrl_hs | sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr> | return value |
+|ap_rst         |  in |    1| ap_ctrl_hs | sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr> | return value |
+|ap_start       |  in |    1| ap_ctrl_hs | sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr> | return value |
+|ap_done        | out |    1| ap_ctrl_hs | sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr> | return value |
+|ap_idle        | out |    1| ap_ctrl_hs | sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr> | return value |
+|ap_ready       | out |    1| ap_ctrl_hs | sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr> | return value |
+|ap_ce          |  in |    1| ap_ctrl_hs | sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr> | return value |
+|ap_return_0    | out |   16| ap_ctrl_hs | sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr> | return value |
+|ap_return_1    | out |   16| ap_ctrl_hs | sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr> | return value |
+|data_0_V_read  |  in |   16|   ap_none  |                  data_0_V_read                  |    scalar    |
+|data_1_V_read  |  in |   16|   ap_none  |                  data_1_V_read                  |    scalar    |
++---------------+-----+-----+------------+-------------------------------------------------+--------------+
+

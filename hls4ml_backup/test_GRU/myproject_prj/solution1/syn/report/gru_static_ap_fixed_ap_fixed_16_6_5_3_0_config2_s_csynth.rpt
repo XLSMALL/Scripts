@@ -1,0 +1,188 @@
+
+
+================================================================
+== Vivado HLS Report for 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s'
+================================================================
+* Date:           Fri Jan 13 14:29:35 2023
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.329 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       20|       20| 0.100 us | 0.100 us |   16|   16| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+        |                                                              |                                                   |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+        |                           Instance                           |                       Module                      |   min   |   max   |    min    |    max    | min | max |   Type   |
+        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+        |grp_dense_latency_ap_fixed_ap_fixed_config2_1_0_0_0_0_fu_116  |dense_latency_ap_fixed_ap_fixed_config2_1_0_0_0_0  |        4|        4| 20.000 ns | 20.000 ns |    1|    1| function |
+        |grp_sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s_fu_140   |sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s   |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        |grp_dense_latency_ap_fixed_ap_fixed_config2_2_0_0_0_0_fu_148  |dense_latency_ap_fixed_ap_fixed_config2_2_0_0_0_0  |        1|        1|  5.000 ns |  5.000 ns |    1|    1| function |
+        |grp_tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s_fu_153   |tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s   |        3|        3| 15.000 ns | 15.000 ns |    1|    1| function |
+        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      3|       -|      -|    -|
+|Expression       |        -|      -|       0|    115|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        2|     29|    3173|   1158|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    112|    -|
+|Register         |        -|      -|     281|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        2|     32|    3454|   1385|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |    ~0   |     14|       3|      2|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------------+---------------------------------------------------+---------+-------+------+-----+-----+
+    |                           Instance                           |                       Module                      | BRAM_18K| DSP48E|  FF  | LUT | URAM|
+    +--------------------------------------------------------------+---------------------------------------------------+---------+-------+------+-----+-----+
+    |grp_dense_latency_ap_fixed_ap_fixed_config2_1_0_0_0_0_fu_116  |dense_latency_ap_fixed_ap_fixed_config2_1_0_0_0_0  |        0|     27|  2861|  672|    0|
+    |grp_dense_latency_ap_fixed_ap_fixed_config2_2_0_0_0_0_fu_148  |dense_latency_ap_fixed_ap_fixed_config2_2_0_0_0_0  |        0|      2|   197|   62|    0|
+    |grp_sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s_fu_140   |sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s   |        1|      0|    74|  272|    0|
+    |grp_tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s_fu_153   |tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s   |        1|      0|    41|  152|    0|
+    +--------------------------------------------------------------+---------------------------------------------------+---------+-------+------+-----+-----+
+    |Total                                                         |                                                   |        2|     29|  3173| 1158|    0|
+    +--------------------------------------------------------------+---------------------------------------------------+---------+-------+------+-----+-----+
+
+    * DSP48E: 
+    +---------------------------------------------+-----------------------------------------+--------------+
+    |                   Instance                  |                  Module                 |  Expression  |
+    +---------------------------------------------+-----------------------------------------+--------------+
+    |myproject_mac_muladd_11s_17s_26s_26_3_1_U58  |myproject_mac_muladd_11s_17s_26s_26_3_1  | i0 + i1 * i2 |
+    |myproject_mul_mul_16s_16s_26_3_1_U56         |myproject_mul_mul_16s_16s_26_3_1         |    i0 * i1   |
+    |myproject_mul_mul_16s_16s_26_3_1_U57         |myproject_mul_mul_16s_16s_26_3_1         |    i0 * i1   |
+    +---------------------------------------------+-----------------------------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------------------------------------------------+----------+-------+---+----+------------+------------+
+    |                               Variable Name                              | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------------------------------------------------+----------+-------+---+----+------------+------------+
+    |inputacc_h_0_V_fu_233_p2                                                  |     +    |      0|  0|  23|          16|          16|
+    |inputacc_zr_0_V_fu_189_p2                                                 |     +    |      0|  0|  23|          16|          16|
+    |inputacc_zr_1_V_fu_195_p2                                                 |     +    |      0|  0|  23|          16|          16|
+    |sub_ln1193_fu_242_p2                                                      |     -    |      0|  0|  24|          11|          17|
+    |ap_block_pp0_stage0_11001                                                 |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_subdone                                               |    or    |      0|  0|   2|           1|           1|
+    |grp_dense_latency_ap_fixed_ap_fixed_config2_2_0_0_0_0_fu_148_data_V_read  |  select  |      0|  0|  16|           1|           1|
+    |ap_enable_pp0                                                             |    xor   |      0|  0|   2|           1|           2|
+    +--------------------------------------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                                                     |          |      0|  0| 115|          63|          70|
+    +--------------------------------------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------+----+-----------+-----+-----------+
+    |                Name               | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                          |  85|         17|    1|         17|
+    |ap_enable_reg_pp0_iter0            |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1            |   9|          2|    1|          2|
+    |ap_sig_allocacmp_h_state_V_0_load  |   9|          2|   16|         32|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |Total                              | 112|         23|   19|         53|
+    +-----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                   Name                                   | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                 |  16|   0|   16|          0|
+    |ap_enable_reg_pp0_iter0_reg                                               |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                                                   |   1|   0|    1|          0|
+    |ap_port_reg_reset_state                                                   |   1|   0|    1|          0|
+    |call_ret1_reg_347_0                                                       |  16|   0|   16|          0|
+    |call_ret1_reg_347_1                                                       |  16|   0|   16|          0|
+    |call_ret1_reg_347_2                                                       |  16|   0|   16|          0|
+    |call_ret_reg_354_0                                                        |  16|   0|   16|          0|
+    |call_ret_reg_354_1                                                        |  16|   0|   16|          0|
+    |grp_sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s_fu_140_ap_start_reg  |   1|   0|    1|          0|
+    |grp_tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s_fu_153_ap_start_reg  |   1|   0|    1|          0|
+    |h_state_V_0                                                               |  16|   0|   16|          0|
+    |inputacc_h_0_V_reg_411                                                    |  16|   0|   16|          0|
+    |inputacc_zr_0_V_reg_365                                                   |  16|   0|   16|          0|
+    |inputacc_zr_1_V_reg_370                                                   |  16|   0|   16|          0|
+    |mul_ln1118_reg_406                                                        |  26|   0|   26|          0|
+    |mul_ln1192_reg_416                                                        |  26|   0|   26|          0|
+    |select_ln443_reg_341                                                      |  16|   0|   16|          0|
+    |tmpres_state_zr_2_V_reg_360                                               |  16|   0|   16|          0|
+    |tmpres_zr_0_V_reg_375                                                     |  16|   0|   16|          0|
+    |tmpres_zr_1_V_reg_381                                                     |  16|   0|   16|          0|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                     | 281|   0|  281|          0|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------+-----+-----+------------+---------------------------------------------------+--------------+
+|   RTL Ports   | Dir | Bits|  Protocol  |                   Source Object                   |    C Type    |
++---------------+-----+-----+------------+---------------------------------------------------+--------------+
+|ap_clk         |  in |    1| ap_ctrl_hs | gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2> | return value |
+|ap_rst         |  in |    1| ap_ctrl_hs | gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2> | return value |
+|ap_start       |  in |    1| ap_ctrl_hs | gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2> | return value |
+|ap_done        | out |    1| ap_ctrl_hs | gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2> | return value |
+|ap_idle        | out |    1| ap_ctrl_hs | gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2> | return value |
+|ap_ready       | out |    1| ap_ctrl_hs | gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2> | return value |
+|ap_ce          |  in |    1| ap_ctrl_hs | gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2> | return value |
+|ap_return      | out |   16| ap_ctrl_hs | gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2> | return value |
+|reset_state    |  in |    1|   ap_none  |                    reset_state                    |    scalar    |
+|data_0_V_read  |  in |   16|   ap_none  |                   data_0_V_read                   |    scalar    |
+|data_1_V_read  |  in |   16|   ap_none  |                   data_1_V_read                   |    scalar    |
+|data_2_V_read  |  in |   16|   ap_none  |                   data_2_V_read                   |    scalar    |
+|data_3_V_read  |  in |   16|   ap_none  |                   data_3_V_read                   |    scalar    |
+|data_4_V_read  |  in |   16|   ap_none  |                   data_4_V_read                   |    scalar    |
+|data_5_V_read  |  in |   16|   ap_none  |                   data_5_V_read                   |    scalar    |
+|data_6_V_read  |  in |   16|   ap_none  |                   data_6_V_read                   |    scalar    |
+|data_7_V_read  |  in |   16|   ap_none  |                   data_7_V_read                   |    scalar    |
+|data_8_V_read  |  in |   16|   ap_none  |                   data_8_V_read                   |    scalar    |
+|data_9_V_read  |  in |   16|   ap_none  |                   data_9_V_read                   |    scalar    |
++---------------+-----+-----+------------+---------------------------------------------------+--------------+
+

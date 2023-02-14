@@ -1,0 +1,600 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 891.812 ; gain = 459.035 ; free physical = 3825 ; free virtual = 12572
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 891.812 ; gain = 459.035 ; free physical = 3825 ; free virtual = 12572
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (firmware/nnet_utils/nnet_recurrent.h:506) in function 'void nnet::gru_stack<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-9' (firmware/nnet_utils/nnet_recurrent.h:444) in function 'void nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(bool, FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-11' (firmware/nnet_utils/nnet_recurrent.h:466) in function 'void nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(bool, FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-12' (firmware/nnet_utils/nnet_recurrent.h:472) in function 'void nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(bool, FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-13' (firmware/nnet_utils/nnet_recurrent.h:482) in function 'void nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(bool, FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' (firmware/nnet_utils/nnet_dense_latency.h:56).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' (firmware/nnet_utils/nnet_dense_latency.h:56).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense_latency.h:56).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' (firmware/nnet_utils/nnet_dense_latency.h:63).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' (firmware/nnet_utils/nnet_dense_latency.h:63).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense_latency.h:63).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' into 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:450).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' into 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:451).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' into 'myproject' (firmware/myproject.cpp:59).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1093.988 ; gain = 661.211 ; free physical = 3563 ; free virtual = 12353
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<int, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, double>' into '__hls_fptosi_double_i32' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:55) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' (firmware/nnet_utils/nnet_dense_latency.h:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' (firmware/nnet_utils/nnet_dense_latency.h:83) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' (firmware/nnet_utils/nnet_dense_latency.h:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' (firmware/nnet_utils/nnet_dense_latency.h:83) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::activation::sigmoid<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, sigmoid_config2_recr>::activation' into 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:461) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::activation::tanh<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, tanh_config2>::activation' into 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:479) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense_latency.h:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense_latency.h:83) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1093.988 ; gain = 661.211 ; free physical = 3522 ; free virtual = 12316
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::gru_stack<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:499:84).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:46:53).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::sigmoid<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, sigmoid_config2_recr>' (firmware/nnet_utils/nnet_activation.h:140:39).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' (firmware/nnet_utils/nnet_dense_latency.h:33:55).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' (firmware/nnet_utils/nnet_dense_latency.h:39:55).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_recurrent.h:510) in function 'nnet::gru_stack<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_recurrent.h:511) in function 'nnet::gru_stack<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.2' (firmware/nnet_utils/nnet_recurrent.h:520) in function 'nnet::gru_stack<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_recurrent.h:454) in function 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_activation.h:145) in function 'nnet::sigmoid<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, sigmoid_config2_recr>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Product2' (firmware/nnet_utils/nnet_dense_latency.h:61) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'ResetAccum' (firmware/nnet_utils/nnet_dense_latency.h:68) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Accum2' (firmware/nnet_utils/nnet_dense_latency.h:74) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Result' (firmware/nnet_utils/nnet_dense_latency.h:81) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Product1' (firmware/nnet_utils/nnet_dense_latency.h:59) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Product2' (firmware/nnet_utils/nnet_dense_latency.h:61) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'ResetAccum' (firmware/nnet_utils/nnet_dense_latency.h:68) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Accum1' (firmware/nnet_utils/nnet_dense_latency.h:73) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Accum2' (firmware/nnet_utils/nnet_dense_latency.h:74) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Result' (firmware/nnet_utils/nnet_dense_latency.h:81) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' completely with a factor of 3.
+INFO: [XFORM 203-131] Reshaping array 'input_1.V' (firmware/myproject.cpp:25) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer3_out.V' (firmware/myproject.cpp:26) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer2_out.V' (firmware/myproject.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'h_state.V' (firmware/nnet_utils/nnet_recurrent.h:499) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'data_in.V' (firmware/nnet_utils/nnet_recurrent.h:500) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b3.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'mult.V' (firmware/nnet_utils/nnet_dense_latency.h:39) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_latency.h:40) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'h_state.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmpres.V' (firmware/nnet_utils/nnet_recurrent.h:425) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmpres_state_zr.V' (firmware/nnet_utils/nnet_recurrent.h:426) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmpres_state_h.V' (firmware/nnet_utils/nnet_recurrent.h:427) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmpres_zr.V' (firmware/nnet_utils/nnet_recurrent.h:428) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmpres_h.V' (firmware/nnet_utils/nnet_recurrent.h:429) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'inputacc_zr.V' (firmware/nnet_utils/nnet_recurrent.h:430) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'inputacc_h.V' (firmware/nnet_utils/nnet_recurrent.h:431) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'br2.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'mult.V' (firmware/nnet_utils/nnet_dense_latency.h:39) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_latency.h:40) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b2.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'mult.V' (firmware/nnet_utils/nnet_dense_latency.h:39) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_latency.h:40) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<int, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, double>' into '__hls_fptosi_double_i32' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:55) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' (firmware/nnet_utils/nnet_dense_latency.h:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' (firmware/nnet_utils/nnet_dense_latency.h:83) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' (firmware/nnet_utils/nnet_dense_latency.h:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' (firmware/nnet_utils/nnet_dense_latency.h:83) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::activation::sigmoid<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, sigmoid_config2_recr>::activation' into 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:461) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::activation::tanh<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, tanh_config2>::activation' into 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:479) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense_latency.h:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense_latency.h:83) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::gru_stack<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'myproject' automatically.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'(firmware/nnet_utils/nnet_dense_latency.h:35:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/myproject.cpp:59) by setting 'weights.V' to 'w3.V'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0'(firmware/nnet_utils/nnet_dense_latency.h:35:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/myproject.cpp:59) by setting 'biases.V' to 'b3.V.0'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) by setting 'weights.V' to 'wr2.V'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) by setting 'biases[0].V' to 'br2.V.0'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0.0'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0.0.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) by setting 'biases[1].V' to 'br2.V.1'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0.0.0'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0.0.0.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) by setting 'biases[2].V' to 'br2.V.2'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450) by setting 'weights.V' to 'w2.V'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450) by setting 'biases[0].V' to 'b2.V.0'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0.0'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0.0.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450) by setting 'biases[1].V' to 'b2.V.1'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0.0.0'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0.0.0.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450) by setting 'biases[2].V' to 'b2.V.2'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_activation.h:420:18) to (firmware/nnet_utils/nnet_activation.h:448:1) in function 'nnet::tanh<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, tanh_config2>'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_activation.h:125:21) to (firmware/nnet_utils/nnet_activation.h:152:1) in function 'nnet::sigmoid<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, sigmoid_config2_recr>'... converting 5 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0.0.0.0' (firmware/nnet_utils/nnet_dense_latency.h:48:1)...27 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1220.094 ; gain = 787.316 ; free physical = 3425 ; free virtual = 12230
+WARNING: [XFORM 203-631] Renaming function 'nnet::tanh<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, tanh_config2>' to 'tanh<ap_fixed,ap_fixed<16,6,5,3,0>,tanh_config2>' (firmware/nnet_utils/nnet_activation.h:435:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::sigmoid<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, sigmoid_config2_recr>' to 'sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr>' (firmware/nnet_utils/nnet_activation.h:140:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' (firmware/nnet_utils/nnet_recurrent.h:43:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0.0' to 'dense_latency<ap_fixed,ap_fixed,config3>.0.0' (firmware/nnet_utils/nnet_dense_latency.h:48:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0.0.0.0' to 'dense_latency<ap_fixed,ap_fixed,config2_2>.0.0.0.0' (firmware/nnet_utils/nnet_dense_latency.h:48:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0.0.0.0' to 'dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0' (firmware/nnet_utils/nnet_dense_latency.h:48:1)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1220.094 ; gain = 787.316 ; free physical = 3352 ; free virtual = 12158
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0' to 'dense_latency_ap_fixed_ap_fixed_config2_1_0_0_0_0'.
+WARNING: [SYN 201-103] Legalizing function name 'dense_latency<ap_fixed,ap_fixed,config2_2>.0.0.0.0' to 'dense_latency_ap_fixed_ap_fixed_config2_2_0_0_0_0'.
+WARNING: [SYN 201-103] Legalizing function name 'sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr>' to 'sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s'.
+WARNING: [SYN 201-103] Legalizing function name 'tanh<ap_fixed,ap_fixed<16,6,5,3,0>,tanh_config2>' to 'tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' to 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'dense_latency<ap_fixed,ap_fixed,config3>.0.0' to 'dense_latency_ap_fixed_ap_fixed_config3_0_0'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_latency_ap_fixed_ap_fixed_config2_1_0_0_0_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 28.41 seconds; current allocated memory: 472.988 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 473.823 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_latency_ap_fixed_ap_fixed_config2_2_0_0_0_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'dense_latency<ap_fixed,ap_fixed,config2_2>.0.0.0.0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 474.040 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 474.141 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 474.416 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 474.674 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'tanh<ap_fixed,ap_fixed<16,6,5,3,0>,tanh_config2>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 474.790 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 474.938 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s' (Function: gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'store' operation ('h_state_V_0_write_ln446', firmware/nnet_utils/nnet_recurrent.h:446) of variable 'h_newstate.V', firmware/nnet_utils/nnet_recurrent.h:484 on static variable 'h_state_V_0' and 'load' operation ('h_state_V_0_load', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) on static variable 'h_state_V_0'.
+WARNING: [SCHED 204-68] The II Violation in module 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s' (Function: gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'store' operation ('h_state_V_0_write_ln446', firmware/nnet_utils/nnet_recurrent.h:446) of variable 'h_newstate.V', firmware/nnet_utils/nnet_recurrent.h:484 on static variable 'h_state_V_0' and 'load' operation ('h_state_V_0_load', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) on static variable 'h_state_V_0'.
+WARNING: [SCHED 204-68] The II Violation in module 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s' (Function: gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0)
+   between 'store' operation ('h_state_V_0_write_ln446', firmware/nnet_utils/nnet_recurrent.h:446) of variable 'h_newstate.V', firmware/nnet_utils/nnet_recurrent.h:484 on static variable 'h_state_V_0' and 'load' operation ('h_state_V_0_load', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) on static variable 'h_state_V_0'.
+WARNING: [SCHED 204-68] The II Violation in module 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s' (Function: gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0)
+   between 'store' operation ('h_state_V_0_write_ln446', firmware/nnet_utils/nnet_recurrent.h:446) of variable 'h_newstate.V', firmware/nnet_utils/nnet_recurrent.h:484 on static variable 'h_state_V_0' and 'load' operation ('h_state_V_0_load', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) on static variable 'h_state_V_0'.
+WARNING: [SCHED 204-68] The II Violation in module 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s' (Function: gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 0)
+   between 'store' operation ('h_state_V_0_write_ln446', firmware/nnet_utils/nnet_recurrent.h:446) of variable 'h_newstate.V', firmware/nnet_utils/nnet_recurrent.h:484 on static variable 'h_state_V_0' and 'load' operation ('h_state_V_0_load', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) on static variable 'h_state_V_0'.
+WARNING: [SCHED 204-68] The II Violation in module 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s' (Function: gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 0)
+   between 'store' operation ('h_state_V_0_write_ln446', firmware/nnet_utils/nnet_recurrent.h:446) of variable 'h_newstate.V', firmware/nnet_utils/nnet_recurrent.h:484 on static variable 'h_state_V_0' and 'load' operation ('h_state_V_0_load', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) on static variable 'h_state_V_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 16, Depth = 21.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 475.270 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 475.711 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_latency_ap_fixed_ap_fixed_config3_0_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'dense_latency<ap_fixed,ap_fixed,config3>.0.0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 475.900 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 475.981 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'myproject'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 16, distance = 1, offset = 1)
+   between 'call' operation ('empty', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-62] II = 17 is infeasible due to multiple pipeline iteration latency = 21 and incompatible II = 16 of 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-62] II = 18 is infeasible due to multiple pipeline iteration latency = 21 and incompatible II = 16 of 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-62] II = 19 is infeasible due to multiple pipeline iteration latency = 21 and incompatible II = 16 of 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-62] II = 20 is infeasible due to multiple pipeline iteration latency = 21 and incompatible II = 16 of 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 21, distance = 1, offset = 1)
+   between 'call' operation ('empty', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 22, distance = 1, offset = 1)
+   between 'call' operation ('empty', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 23, distance = 1, offset = 1)
+   between 'call' operation ('empty', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 81, distance = 1, offset = 1)
+   between 'call' operation ('empty_21', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 95, distance = 1, offset = 1)
+   between 'call' operation ('empty_22', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 102, distance = 1, offset = 1)
+   between 'call' operation ('empty_22', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 104, distance = 1, offset = 1)
+   between 'call' operation ('empty_22', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 105, Depth = 105.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 476.481 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] After resource sharing, estimated clock period (5.29775ns) exceeds the target (target clock period: 5ns, clock uncertainty: 0.625ns, effective delay budget: 4.375ns).
+INFO: [BIND 205-100] The critical path consists of the following:
+	wire read on port 'input_1_V' (0 ns)
+	'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' (5.3 ns)
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.49 seconds; current allocated memory: 477.854 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_latency_ap_fixed_ap_fixed_config2_1_0_0_0_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_10ns_26_2_0': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_10s_26_2_0': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_11ns_26_2_0': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_11s_26_2_0': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_8ns_24_2_0': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_8s_24_2_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_9ns_25_2_0': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_9s_25_2_0': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_latency_ap_fixed_ap_fixed_config2_1_0_0_0_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 479.460 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_latency_ap_fixed_ap_fixed_config2_2_0_0_0_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_11ns_26_2_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_11s_26_2_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_8ns_24_2_0': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_latency_ap_fixed_ap_fixed_config2_2_0_0_0_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 482.627 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s_sigmoid_table2' to 'sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s_sigmoid_bkb' due to the length limit 60
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 483.372 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s_tanh_table1' to 'tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s_tanh_tabcud' due to the length limit 60
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 484.534 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 961.750 ; gain = 528.973 ; free physical = 8149 ; free virtual = 14212
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 961.750 ; gain = 528.973 ; free physical = 8149 ; free virtual = 14212
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (firmware/nnet_utils/nnet_recurrent.h:506) in function 'void nnet::gru_stack<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-9' (firmware/nnet_utils/nnet_recurrent.h:444) in function 'void nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(bool, FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-11' (firmware/nnet_utils/nnet_recurrent.h:466) in function 'void nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(bool, FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-12' (firmware/nnet_utils/nnet_recurrent.h:472) in function 'void nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(bool, FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-13' (firmware/nnet_utils/nnet_recurrent.h:482) in function 'void nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(bool, FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' (firmware/nnet_utils/nnet_dense_latency.h:56).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' (firmware/nnet_utils/nnet_dense_latency.h:56).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::limit' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense_latency.h:56).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' (firmware/nnet_utils/nnet_dense_latency.h:63).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' (firmware/nnet_utils/nnet_dense_latency.h:63).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense_latency.h:63).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' into 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:450).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' into 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:451).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' into 'myproject' (firmware/myproject.cpp:59).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1041.754 ; gain = 608.977 ; free physical = 7937 ; free virtual = 14011
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<int, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, double>' into '__hls_fptosi_double_i32' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:55) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' (firmware/nnet_utils/nnet_dense_latency.h:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' (firmware/nnet_utils/nnet_dense_latency.h:83) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' (firmware/nnet_utils/nnet_dense_latency.h:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' (firmware/nnet_utils/nnet_dense_latency.h:83) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::activation::sigmoid<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, sigmoid_config2_recr>::activation' into 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:461) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::activation::tanh<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, tanh_config2>::activation' into 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:479) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense_latency.h:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense_latency.h:83) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1162.031 ; gain = 729.254 ; free physical = 7906 ; free virtual = 13980
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::gru_stack<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:499:84).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:46:53).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::sigmoid<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, sigmoid_config2_recr>' (firmware/nnet_utils/nnet_activation.h:140:39).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' (firmware/nnet_utils/nnet_dense_latency.h:33:55).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' (firmware/nnet_utils/nnet_dense_latency.h:39:55).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_recurrent.h:510) in function 'nnet::gru_stack<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_recurrent.h:511) in function 'nnet::gru_stack<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.2' (firmware/nnet_utils/nnet_recurrent.h:520) in function 'nnet::gru_stack<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_recurrent.h:454) in function 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/nnet_activation.h:145) in function 'nnet::sigmoid<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, sigmoid_config2_recr>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Product2' (firmware/nnet_utils/nnet_dense_latency.h:61) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'ResetAccum' (firmware/nnet_utils/nnet_dense_latency.h:68) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Accum2' (firmware/nnet_utils/nnet_dense_latency.h:74) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Result' (firmware/nnet_utils/nnet_dense_latency.h:81) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Product1' (firmware/nnet_utils/nnet_dense_latency.h:59) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Product2' (firmware/nnet_utils/nnet_dense_latency.h:61) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'ResetAccum' (firmware/nnet_utils/nnet_dense_latency.h:68) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Accum1' (firmware/nnet_utils/nnet_dense_latency.h:73) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Accum2' (firmware/nnet_utils/nnet_dense_latency.h:74) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Result' (firmware/nnet_utils/nnet_dense_latency.h:81) in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' completely with a factor of 3.
+INFO: [XFORM 203-131] Reshaping array 'input_1.V' (firmware/myproject.cpp:25) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer3_out.V' (firmware/myproject.cpp:26) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer2_out.V' (firmware/myproject.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'h_state.V' (firmware/nnet_utils/nnet_recurrent.h:499) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'data_in.V' (firmware/nnet_utils/nnet_recurrent.h:500) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b3.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'mult.V' (firmware/nnet_utils/nnet_dense_latency.h:39) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_latency.h:40) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'h_state.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmpres.V' (firmware/nnet_utils/nnet_recurrent.h:425) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmpres_state_zr.V' (firmware/nnet_utils/nnet_recurrent.h:426) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmpres_state_h.V' (firmware/nnet_utils/nnet_recurrent.h:427) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmpres_zr.V' (firmware/nnet_utils/nnet_recurrent.h:428) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmpres_h.V' (firmware/nnet_utils/nnet_recurrent.h:429) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'inputacc_zr.V' (firmware/nnet_utils/nnet_recurrent.h:430) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'inputacc_h.V' (firmware/nnet_utils/nnet_recurrent.h:431) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'br2.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'mult.V' (firmware/nnet_utils/nnet_dense_latency.h:39) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_latency.h:40) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b2.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'mult.V' (firmware/nnet_utils/nnet_dense_latency.h:39) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_latency.h:40) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<int, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, double>' into '__hls_fptosi_double_i32' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:55) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' (firmware/nnet_utils/nnet_dense_latency.h:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' (firmware/nnet_utils/nnet_dense_latency.h:83) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' (firmware/nnet_utils/nnet_dense_latency.h:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' (firmware/nnet_utils/nnet_dense_latency.h:83) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::activation::sigmoid<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, sigmoid_config2_recr>::activation' into 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:461) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::activation::tanh<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, tanh_config2>::activation' into 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (firmware/nnet_utils/nnet_recurrent.h:479) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense_latency.h:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' into 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense_latency.h:83) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::gru_stack<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' into 'myproject' automatically.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'(firmware/nnet_utils/nnet_dense_latency.h:35:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/myproject.cpp:59) by setting 'weights.V' to 'w3.V'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0'(firmware/nnet_utils/nnet_dense_latency.h:35:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/myproject.cpp:59) by setting 'biases.V' to 'b3.V.0'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) by setting 'weights.V' to 'wr2.V'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) by setting 'biases[0].V' to 'br2.V.0'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0.0'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0.0.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) by setting 'biases[1].V' to 'br2.V.1'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0.0.0'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0.0.0.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) by setting 'biases[2].V' to 'br2.V.2'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450) by setting 'weights.V' to 'w2.V'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450) by setting 'biases[0].V' to 'b2.V.0'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0.0'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0.0.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450) by setting 'biases[1].V' to 'b2.V.1'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0.0.0'(firmware/nnet_utils/nnet_dense_latency.h:48:1) to 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0.0.0.0' at call site (firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450) by setting 'biases[2].V' to 'b2.V.2'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_activation.h:420:18) to (firmware/nnet_utils/nnet_activation.h:448:1) in function 'nnet::tanh<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, tanh_config2>'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_activation.h:125:21) to (firmware/nnet_utils/nnet_activation.h:152:1) in function 'nnet::sigmoid<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, sigmoid_config2_recr>'... converting 5 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0.0.0.0' (firmware/nnet_utils/nnet_dense_latency.h:48:1)...27 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1162.031 ; gain = 729.254 ; free physical = 7811 ; free virtual = 13886
+WARNING: [XFORM 203-631] Renaming function 'nnet::tanh<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, tanh_config2>' to 'tanh<ap_fixed,ap_fixed<16,6,5,3,0>,tanh_config2>' (firmware/nnet_utils/nnet_activation.h:435:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::sigmoid<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, sigmoid_config2_recr>' to 'sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr>' (firmware/nnet_utils/nnet_activation.h:140:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::gru_static<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' (firmware/nnet_utils/nnet_recurrent.h:43:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0.0' to 'dense_latency<ap_fixed,ap_fixed,config3>.0.0' (firmware/nnet_utils/nnet_dense_latency.h:48:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>.0.0.0.0' to 'dense_latency<ap_fixed,ap_fixed,config2_2>.0.0.0.0' (firmware/nnet_utils/nnet_dense_latency.h:48:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::dense_latency<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>.0.0.0.0' to 'dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0' (firmware/nnet_utils/nnet_dense_latency.h:48:1)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1281.750 ; gain = 848.973 ; free physical = 7759 ; free virtual = 13834
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+WARNING: [SYN 201-103] Legalizing function name 'dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0' to 'dense_latency_ap_fixed_ap_fixed_config2_1_0_0_0_0'.
+WARNING: [SYN 201-103] Legalizing function name 'dense_latency<ap_fixed,ap_fixed,config2_2>.0.0.0.0' to 'dense_latency_ap_fixed_ap_fixed_config2_2_0_0_0_0'.
+WARNING: [SYN 201-103] Legalizing function name 'sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr>' to 'sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s'.
+WARNING: [SYN 201-103] Legalizing function name 'tanh<ap_fixed,ap_fixed<16,6,5,3,0>,tanh_config2>' to 'tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' to 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'dense_latency<ap_fixed,ap_fixed,config3>.0.0' to 'dense_latency_ap_fixed_ap_fixed_config3_0_0'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_latency_ap_fixed_ap_fixed_config2_1_0_0_0_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 27.7 seconds; current allocated memory: 473.126 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 473.938 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_latency_ap_fixed_ap_fixed_config2_2_0_0_0_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'dense_latency<ap_fixed,ap_fixed,config2_2>.0.0.0.0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 474.152 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 474.263 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 474.539 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 474.801 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'tanh<ap_fixed,ap_fixed<16,6,5,3,0>,tanh_config2>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 474.930 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 475.079 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s' (Function: gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'store' operation ('h_state_V_0_write_ln446', firmware/nnet_utils/nnet_recurrent.h:446) of variable 'h_newstate.V', firmware/nnet_utils/nnet_recurrent.h:484 on static variable 'h_state_V_0' and 'load' operation ('h_state_V_0_load', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) on static variable 'h_state_V_0'.
+WARNING: [SCHED 204-68] The II Violation in module 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s' (Function: gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'store' operation ('h_state_V_0_write_ln446', firmware/nnet_utils/nnet_recurrent.h:446) of variable 'h_newstate.V', firmware/nnet_utils/nnet_recurrent.h:484 on static variable 'h_state_V_0' and 'load' operation ('h_state_V_0_load', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) on static variable 'h_state_V_0'.
+WARNING: [SCHED 204-68] The II Violation in module 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s' (Function: gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0)
+   between 'store' operation ('h_state_V_0_write_ln446', firmware/nnet_utils/nnet_recurrent.h:446) of variable 'h_newstate.V', firmware/nnet_utils/nnet_recurrent.h:484 on static variable 'h_state_V_0' and 'load' operation ('h_state_V_0_load', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) on static variable 'h_state_V_0'.
+WARNING: [SCHED 204-68] The II Violation in module 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s' (Function: gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0)
+   between 'store' operation ('h_state_V_0_write_ln446', firmware/nnet_utils/nnet_recurrent.h:446) of variable 'h_newstate.V', firmware/nnet_utils/nnet_recurrent.h:484 on static variable 'h_state_V_0' and 'load' operation ('h_state_V_0_load', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) on static variable 'h_state_V_0'.
+WARNING: [SCHED 204-68] The II Violation in module 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s' (Function: gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 0)
+   between 'store' operation ('h_state_V_0_write_ln446', firmware/nnet_utils/nnet_recurrent.h:446) of variable 'h_newstate.V', firmware/nnet_utils/nnet_recurrent.h:484 on static variable 'h_state_V_0' and 'load' operation ('h_state_V_0_load', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) on static variable 'h_state_V_0'.
+WARNING: [SCHED 204-68] The II Violation in module 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s' (Function: gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 0)
+   between 'store' operation ('h_state_V_0_write_ln446', firmware/nnet_utils/nnet_recurrent.h:446) of variable 'h_newstate.V', firmware/nnet_utils/nnet_recurrent.h:484 on static variable 'h_state_V_0' and 'load' operation ('h_state_V_0_load', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451) on static variable 'h_state_V_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 16, Depth = 21.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 475.424 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 475.866 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_latency_ap_fixed_ap_fixed_config3_0_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'dense_latency<ap_fixed,ap_fixed,config3>.0.0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 476.039 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 476.121 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'myproject'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 16, distance = 1, offset = 1)
+   between 'call' operation ('empty', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-62] II = 17 is infeasible due to multiple pipeline iteration latency = 21 and incompatible II = 16 of 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-62] II = 18 is infeasible due to multiple pipeline iteration latency = 21 and incompatible II = 16 of 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-62] II = 19 is infeasible due to multiple pipeline iteration latency = 21 and incompatible II = 16 of 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-62] II = 20 is infeasible due to multiple pipeline iteration latency = 21 and incompatible II = 16 of 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 21, distance = 1, offset = 1)
+   between 'call' operation ('empty', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 22, distance = 1, offset = 1)
+   between 'call' operation ('empty', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 23, distance = 1, offset = 1)
+   between 'call' operation ('empty', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 81, distance = 1, offset = 1)
+   between 'call' operation ('empty_19', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 95, distance = 1, offset = 1)
+   between 'call' operation ('empty_20', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 102, distance = 1, offset = 1)
+   between 'call' operation ('empty_20', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+WARNING: [SCHED 204-68] The II Violation in module 'myproject' (Function: myproject): Unable to enforce a carried dependence constraint (II = 104, distance = 1, offset = 1)
+   between 'call' operation ('empty_20', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' and 'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 105, Depth = 105.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 476.620 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] After resource sharing, estimated clock period (5.29775ns) exceeds the target (target clock period: 5ns, clock uncertainty: 0.625ns, effective delay budget: 4.375ns).
+INFO: [BIND 205-100] The critical path consists of the following:
+	wire read on port 'input_1_V' (0 ns)
+	'call' operation ('h_state[0].V', firmware/nnet_utils/nnet_recurrent.h:516) to 'gru_static<ap_fixed,ap_fixed<16,6,5,3,0>,config2>' (5.3 ns)
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 478.007 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_latency_ap_fixed_ap_fixed_config2_1_0_0_0_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_10ns_26_2_0': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_10s_26_2_0': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_11ns_26_2_0': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_11s_26_2_0': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_7ns_23_2_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_7s_23_2_0': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_8ns_24_2_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_8s_24_2_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_9ns_25_2_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_9s_25_2_0': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_latency_ap_fixed_ap_fixed_config2_1_0_0_0_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 479.593 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_latency_ap_fixed_ap_fixed_config2_2_0_0_0_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_11ns_26_2_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_16s_9ns_25_2_0': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_latency_ap_fixed_ap_fixed_config2_2_0_0_0_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 482.522 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s_sigmoid_table2' to 'sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s_sigmoid_bkb' due to the length limit 60
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sigmoid_ap_fixed_ap_fixed_sigmoid_config2_recr_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 483.393 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s_tanh_table1' to 'tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s_tanh_tabcud' due to the length limit 60
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tanh_ap_fixed_ap_fixed_16_6_5_3_0_tanh_config2_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 484.544 MB.

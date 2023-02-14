@@ -1,0 +1,333 @@
+
+
+================================================================
+== Vivado HLS Report for 'gru_static_ap_fixed_ap_fixed_16_6_5_3_0_config2_s'
+================================================================
+* Date:           Fri Jan 13 14:29:33 2023
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.329 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       20|       20| 0.100 us | 0.100 us |   16|   16| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 16, depth = 21
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 21
+* Pipeline : 1
+  Pipeline-0 : II = 16, D = 21, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.34>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%data_9_V_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %data_9_V_read)" [firmware/nnet_utils/nnet_recurrent.h:414]   --->   Operation 22 'read' 'data_9_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%data_8_V_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %data_8_V_read)" [firmware/nnet_utils/nnet_recurrent.h:414]   --->   Operation 23 'read' 'data_8_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%data_7_V_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %data_7_V_read)" [firmware/nnet_utils/nnet_recurrent.h:414]   --->   Operation 24 'read' 'data_7_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%data_6_V_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %data_6_V_read)" [firmware/nnet_utils/nnet_recurrent.h:414]   --->   Operation 25 'read' 'data_6_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%data_5_V_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %data_5_V_read)" [firmware/nnet_utils/nnet_recurrent.h:414]   --->   Operation 26 'read' 'data_5_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%data_4_V_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %data_4_V_read)" [firmware/nnet_utils/nnet_recurrent.h:414]   --->   Operation 27 'read' 'data_4_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%data_3_V_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %data_3_V_read)" [firmware/nnet_utils/nnet_recurrent.h:414]   --->   Operation 28 'read' 'data_3_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%data_2_V_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %data_2_V_read)" [firmware/nnet_utils/nnet_recurrent.h:414]   --->   Operation 29 'read' 'data_2_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%data_1_V_read_2 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %data_1_V_read)" [firmware/nnet_utils/nnet_recurrent.h:414]   --->   Operation 30 'read' 'data_1_V_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%data_0_V_read_2 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %data_0_V_read)" [firmware/nnet_utils/nnet_recurrent.h:414]   --->   Operation 31 'read' 'data_0_V_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [6/6] (3.34ns)   --->   "%call_ret1 = call fastcc { i16, i16, i16 } @"dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0"(i16 %data_0_V_read_2, i16 %data_1_V_read_2, i16 %data_2_V_read_1, i16 %data_3_V_read_1, i16 %data_4_V_read_1, i16 %data_5_V_read_1, i16 %data_6_V_read_1, i16 %data_7_V_read_1, i16 %data_8_V_read_1, i16 %data_9_V_read_1)" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450]   --->   Operation 32 'call' 'call_ret1' <Predicate = true> <Delay = 3.34> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 4.16>
+ST_2 : Operation 33 [5/6] (4.16ns)   --->   "%call_ret1 = call fastcc { i16, i16, i16 } @"dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0"(i16 %data_0_V_read_2, i16 %data_1_V_read_2, i16 %data_2_V_read_1, i16 %data_3_V_read_1, i16 %data_4_V_read_1, i16 %data_5_V_read_1, i16 %data_6_V_read_1, i16 %data_7_V_read_1, i16 %data_8_V_read_1, i16 %data_9_V_read_1)" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450]   --->   Operation 33 'call' 'call_ret1' <Predicate = true> <Delay = 4.16> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 4.16>
+ST_3 : Operation 34 [4/6] (4.16ns)   --->   "%call_ret1 = call fastcc { i16, i16, i16 } @"dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0"(i16 %data_0_V_read_2, i16 %data_1_V_read_2, i16 %data_2_V_read_1, i16 %data_3_V_read_1, i16 %data_4_V_read_1, i16 %data_5_V_read_1, i16 %data_6_V_read_1, i16 %data_7_V_read_1, i16 %data_8_V_read_1, i16 %data_9_V_read_1)" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450]   --->   Operation 34 'call' 'call_ret1' <Predicate = true> <Delay = 4.16> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 4.16>
+ST_4 : Operation 35 [3/6] (4.16ns)   --->   "%call_ret1 = call fastcc { i16, i16, i16 } @"dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0"(i16 %data_0_V_read_2, i16 %data_1_V_read_2, i16 %data_2_V_read_1, i16 %data_3_V_read_1, i16 %data_4_V_read_1, i16 %data_5_V_read_1, i16 %data_6_V_read_1, i16 %data_7_V_read_1, i16 %data_8_V_read_1, i16 %data_9_V_read_1)" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450]   --->   Operation 35 'call' 'call_ret1' <Predicate = true> <Delay = 4.16> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 4.16>
+ST_5 : Operation 36 [1/1] (0.00ns)   --->   "%reset_state_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %reset_state)" [firmware/nnet_utils/nnet_recurrent.h:414]   --->   Operation 36 'read' 'reset_state_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%h_state_V_0_load = load i16* @h_state_V_0, align 2" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451]   --->   Operation 37 'load' 'h_state_V_0_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 38 [1/1] (0.80ns)   --->   "%select_ln443 = select i1 %reset_state_read, i16 0, i16 %h_state_V_0_load" [firmware/nnet_utils/nnet_recurrent.h:443]   --->   Operation 38 'select' 'select_ln443' <Predicate = true> <Delay = 0.80> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 39 [2/6] (4.16ns)   --->   "%call_ret1 = call fastcc { i16, i16, i16 } @"dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0"(i16 %data_0_V_read_2, i16 %data_1_V_read_2, i16 %data_2_V_read_1, i16 %data_3_V_read_1, i16 %data_4_V_read_1, i16 %data_5_V_read_1, i16 %data_6_V_read_1, i16 %data_7_V_read_1, i16 %data_8_V_read_1, i16 %data_9_V_read_1)" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450]   --->   Operation 39 'call' 'call_ret1' <Predicate = true> <Delay = 4.16> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 40 [2/2] (3.34ns)   --->   "%call_ret = call fastcc { i16, i16, i16 } @"dense_latency<ap_fixed,ap_fixed,config2_2>.0.0.0.0"(i16 %select_ln443)" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451]   --->   Operation 40 'call' 'call_ret' <Predicate = true> <Delay = 3.34> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 3.90>
+ST_6 : Operation 41 [1/6] (3.90ns)   --->   "%call_ret1 = call fastcc { i16, i16, i16 } @"dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0"(i16 %data_0_V_read_2, i16 %data_1_V_read_2, i16 %data_2_V_read_1, i16 %data_3_V_read_1, i16 %data_4_V_read_1, i16 %data_5_V_read_1, i16 %data_6_V_read_1, i16 %data_7_V_read_1, i16 %data_8_V_read_1, i16 %data_9_V_read_1)" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450]   --->   Operation 41 'call' 'call_ret1' <Predicate = true> <Delay = 3.90> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 42 [1/2] (3.34ns)   --->   "%call_ret = call fastcc { i16, i16, i16 } @"dense_latency<ap_fixed,ap_fixed,config2_2>.0.0.0.0"(i16 %select_ln443)" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451]   --->   Operation 42 'call' 'call_ret' <Predicate = true> <Delay = 3.34> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%tmpres_state_zr_2_V = extractvalue { i16, i16, i16 } %call_ret, 2" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451]   --->   Operation 43 'extractvalue' 'tmpres_state_zr_2_V' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 2.07>
+ST_7 : Operation 44 [1/1] (0.00ns) (grouped into LUT with out node inputacc_zr_0_V)   --->   "%tmpres_0_V = extractvalue { i16, i16, i16 } %call_ret1, 0" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450]   --->   Operation 44 'extractvalue' 'tmpres_0_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node inputacc_zr_1_V)   --->   "%tmpres_1_V = extractvalue { i16, i16, i16 } %call_ret1, 1" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450]   --->   Operation 45 'extractvalue' 'tmpres_1_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 46 [1/1] (0.00ns) (grouped into LUT with out node inputacc_zr_0_V)   --->   "%tmpres_state_zr_0_V = extractvalue { i16, i16, i16 } %call_ret, 0" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451]   --->   Operation 46 'extractvalue' 'tmpres_state_zr_0_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node inputacc_zr_1_V)   --->   "%tmpres_state_zr_1_V = extractvalue { i16, i16, i16 } %call_ret, 1" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:451]   --->   Operation 47 'extractvalue' 'tmpres_state_zr_1_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 48 [1/1] (2.07ns) (out node of the LUT)   --->   "%inputacc_zr_0_V = add i16 %tmpres_state_zr_0_V, %tmpres_0_V" [firmware/nnet_utils/nnet_recurrent.h:457]   --->   Operation 48 'add' 'inputacc_zr_0_V' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 49 [1/1] (2.07ns) (out node of the LUT)   --->   "%inputacc_zr_1_V = add i16 %tmpres_state_zr_1_V, %tmpres_1_V" [firmware/nnet_utils/nnet_recurrent.h:457]   --->   Operation 49 'add' 'inputacc_zr_1_V' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 3.15>
+ST_8 : Operation 50 [4/4] (3.15ns)   --->   "%call_ret_i = call fastcc { i16, i16 } @"sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr>"(i16 %inputacc_zr_0_V, i16 %inputacc_zr_1_V)" [firmware/nnet_utils/nnet_recr_activations.h:43->firmware/nnet_utils/nnet_recurrent.h:461]   --->   Operation 50 'call' 'call_ret_i' <Predicate = true> <Delay = 3.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 4.02>
+ST_9 : Operation 51 [3/4] (4.02ns)   --->   "%call_ret_i = call fastcc { i16, i16 } @"sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr>"(i16 %inputacc_zr_0_V, i16 %inputacc_zr_1_V)" [firmware/nnet_utils/nnet_recr_activations.h:43->firmware/nnet_utils/nnet_recurrent.h:461]   --->   Operation 51 'call' 'call_ret_i' <Predicate = true> <Delay = 4.02> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 4.02>
+ST_10 : Operation 52 [2/4] (4.02ns)   --->   "%call_ret_i = call fastcc { i16, i16 } @"sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr>"(i16 %inputacc_zr_0_V, i16 %inputacc_zr_1_V)" [firmware/nnet_utils/nnet_recr_activations.h:43->firmware/nnet_utils/nnet_recurrent.h:461]   --->   Operation 52 'call' 'call_ret_i' <Predicate = true> <Delay = 4.02> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 3.25>
+ST_11 : Operation 53 [1/4] (3.25ns)   --->   "%call_ret_i = call fastcc { i16, i16 } @"sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr>"(i16 %inputacc_zr_0_V, i16 %inputacc_zr_1_V)" [firmware/nnet_utils/nnet_recr_activations.h:43->firmware/nnet_utils/nnet_recurrent.h:461]   --->   Operation 53 'call' 'call_ret_i' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 54 [1/1] (0.00ns)   --->   "%tmpres_zr_0_V = extractvalue { i16, i16 } %call_ret_i, 0" [firmware/nnet_utils/nnet_recurrent.h:461]   --->   Operation 54 'extractvalue' 'tmpres_zr_0_V' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 55 [1/1] (0.00ns)   --->   "%tmpres_zr_1_V = extractvalue { i16, i16 } %call_ret_i, 1" [firmware/nnet_utils/nnet_recurrent.h:461]   --->   Operation 55 'extractvalue' 'tmpres_zr_1_V' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 11> <Delay = 3.89>
+ST_12 : Operation 56 [1/1] (0.00ns)   --->   "%sext_ln1118 = sext i16 %tmpres_zr_1_V to i26" [firmware/nnet_utils/nnet_recurrent.h:468]   --->   Operation 56 'sext' 'sext_ln1118' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 57 [1/1] (0.00ns)   --->   "%sext_ln1118_1 = sext i16 %tmpres_state_zr_2_V to i26" [firmware/nnet_utils/nnet_recurrent.h:468]   --->   Operation 57 'sext' 'sext_ln1118_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 58 [3/3] (3.89ns) (root node of the DSP)   --->   "%mul_ln1118 = mul i26 %sext_ln1118, %sext_ln1118_1" [firmware/nnet_utils/nnet_recurrent.h:468]   --->   Operation 58 'mul' 'mul_ln1118' <Predicate = true> <Delay = 3.89> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 2> <II = 1> <Delay = 3.88> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 13 <SV = 12> <Delay = 3.89>
+ST_13 : Operation 59 [2/3] (3.89ns) (root node of the DSP)   --->   "%mul_ln1118 = mul i26 %sext_ln1118, %sext_ln1118_1" [firmware/nnet_utils/nnet_recurrent.h:468]   --->   Operation 59 'mul' 'mul_ln1118' <Predicate = true> <Delay = 3.89> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 2> <II = 1> <Delay = 3.88> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 60 [1/1] (0.00ns)   --->   "%sext_ln1192 = sext i16 %select_ln443 to i26" [firmware/nnet_utils/nnet_recurrent.h:484]   --->   Operation 60 'sext' 'sext_ln1192' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 61 [1/1] (0.00ns)   --->   "%sext_ln1192_1 = sext i16 %tmpres_zr_0_V to i26" [firmware/nnet_utils/nnet_recurrent.h:484]   --->   Operation 61 'sext' 'sext_ln1192_1' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 62 [3/3] (3.89ns) (root node of the DSP)   --->   "%mul_ln1192 = mul i26 %sext_ln1192_1, %sext_ln1192" [firmware/nnet_utils/nnet_recurrent.h:484]   --->   Operation 62 'mul' 'mul_ln1192' <Predicate = true> <Delay = 3.89> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 2> <II = 1> <Delay = 3.88> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 14 <SV = 13> <Delay = 3.89>
+ST_14 : Operation 63 [1/3] (0.00ns) (root node of the DSP)   --->   "%mul_ln1118 = mul i26 %sext_ln1118, %sext_ln1118_1" [firmware/nnet_utils/nnet_recurrent.h:468]   --->   Operation 63 'mul' 'mul_ln1118' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 2> <II = 1> <Delay = 3.88> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 64 [2/3] (3.89ns) (root node of the DSP)   --->   "%mul_ln1192 = mul i26 %sext_ln1192_1, %sext_ln1192" [firmware/nnet_utils/nnet_recurrent.h:484]   --->   Operation 64 'mul' 'mul_ln1192' <Predicate = true> <Delay = 3.89> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 2> <II = 1> <Delay = 3.88> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 15 <SV = 14> <Delay = 2.07>
+ST_15 : Operation 65 [1/1] (0.00ns) (grouped into LUT with out node inputacc_h_0_V)   --->   "%tmpres_2_V = extractvalue { i16, i16, i16 } %call_ret1, 2" [firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450]   --->   Operation 65 'extractvalue' 'tmpres_2_V' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 66 [1/1] (0.00ns) (grouped into LUT with out node inputacc_h_0_V)   --->   "%trunc_ln = call i16 @_ssdm_op_PartSelect.i16.i26.i32.i32(i26 %mul_ln1118, i32 10, i32 25)" [firmware/nnet_utils/nnet_recurrent.h:468]   --->   Operation 66 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 67 [1/1] (2.07ns) (out node of the LUT)   --->   "%inputacc_h_0_V = add i16 %trunc_ln, %tmpres_2_V" [firmware/nnet_utils/nnet_recurrent.h:475]   --->   Operation 67 'add' 'inputacc_h_0_V' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 68 [1/3] (0.00ns) (root node of the DSP)   --->   "%mul_ln1192 = mul i26 %sext_ln1192_1, %sext_ln1192" [firmware/nnet_utils/nnet_recurrent.h:484]   --->   Operation 68 'mul' 'mul_ln1192' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 2> <II = 1> <Delay = 3.88> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 16 <SV = 15> <Delay = 3.15>
+ST_16 : Operation 69 [4/4] (3.15ns)   --->   "%tmpres_h_0_V = call fastcc i11 @"tanh<ap_fixed,ap_fixed<16,6,5,3,0>,tanh_config2>"(i16 %inputacc_h_0_V)" [firmware/nnet_utils/nnet_recr_activations.h:55->firmware/nnet_utils/nnet_recurrent.h:479]   --->   Operation 69 'call' 'tmpres_h_0_V' <Predicate = true> <Delay = 3.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 4.32>
+ST_17 : Operation 70 [3/4] (4.32ns)   --->   "%tmpres_h_0_V = call fastcc i11 @"tanh<ap_fixed,ap_fixed<16,6,5,3,0>,tanh_config2>"(i16 %inputacc_h_0_V)" [firmware/nnet_utils/nnet_recr_activations.h:55->firmware/nnet_utils/nnet_recurrent.h:479]   --->   Operation 70 'call' 'tmpres_h_0_V' <Predicate = true> <Delay = 4.32> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 4.32>
+ST_18 : Operation 71 [2/4] (4.32ns)   --->   "%tmpres_h_0_V = call fastcc i11 @"tanh<ap_fixed,ap_fixed<16,6,5,3,0>,tanh_config2>"(i16 %inputacc_h_0_V)" [firmware/nnet_utils/nnet_recr_activations.h:55->firmware/nnet_utils/nnet_recurrent.h:479]   --->   Operation 71 'call' 'tmpres_h_0_V' <Predicate = true> <Delay = 4.32> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 4.30>
+ST_19 : Operation 72 [1/4] (3.25ns)   --->   "%tmpres_h_0_V = call fastcc i11 @"tanh<ap_fixed,ap_fixed<16,6,5,3,0>,tanh_config2>"(i16 %inputacc_h_0_V)" [firmware/nnet_utils/nnet_recr_activations.h:55->firmware/nnet_utils/nnet_recurrent.h:479]   --->   Operation 72 'call' 'tmpres_h_0_V' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_19 : Operation 73 [1/1] (0.00ns)   --->   "%sext_ln1193 = sext i16 %tmpres_zr_0_V to i17" [firmware/nnet_utils/nnet_recurrent.h:484]   --->   Operation 73 'sext' 'sext_ln1193' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 74 [1/1] (2.07ns)   --->   "%sub_ln1193 = sub i17 1024, %sext_ln1193" [firmware/nnet_utils/nnet_recurrent.h:484]   --->   Operation 74 'sub' 'sub_ln1193' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 75 [1/1] (0.00ns)   --->   "%sext_ln703 = sext i11 %tmpres_h_0_V to i26" [firmware/nnet_utils/nnet_recurrent.h:484]   --->   Operation 75 'sext' 'sext_ln703' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 76 [1/1] (0.00ns)   --->   "%sext_ln703_1 = sext i17 %sub_ln1193 to i26" [firmware/nnet_utils/nnet_recurrent.h:484]   --->   Operation 76 'sext' 'sext_ln703_1' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 77 [3/3] (1.05ns) (grouped into DSP with root node add_ln1192)   --->   "%mul_ln703 = mul i26 %sext_ln703, %sext_ln703_1" [firmware/nnet_utils/nnet_recurrent.h:484]   --->   Operation 77 'mul' 'mul_ln703' <Predicate = true> <Delay = 1.05> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 2> <II = 1> <Delay = 3.88> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 20 <SV = 19> <Delay = 1.05>
+ST_20 : Operation 78 [2/3] (1.05ns) (grouped into DSP with root node add_ln1192)   --->   "%mul_ln703 = mul i26 %sext_ln703, %sext_ln703_1" [firmware/nnet_utils/nnet_recurrent.h:484]   --->   Operation 78 'mul' 'mul_ln703' <Predicate = true> <Delay = 1.05> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 2> <II = 1> <Delay = 3.88> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 21 <SV = 20> <Delay = 3.02>
+ST_21 : Operation 79 [1/3] (0.00ns) (grouped into DSP with root node add_ln1192)   --->   "%mul_ln703 = mul i26 %sext_ln703, %sext_ln703_1" [firmware/nnet_utils/nnet_recurrent.h:484]   --->   Operation 79 'mul' 'mul_ln703' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 2> <II = 1> <Delay = 3.88> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_21 : Operation 80 [1/1] (3.02ns) (root node of the DSP)   --->   "%add_ln1192 = add i26 %mul_ln1192, %mul_ln703" [firmware/nnet_utils/nnet_recurrent.h:484]   --->   Operation 80 'add' 'add_ln1192' <Predicate = true> <Delay = 3.02> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 2> <II = 1> <Delay = 3.88> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_21 : Operation 81 [1/1] (0.00ns)   --->   "%h_newstate_V_write_assign = call i16 @_ssdm_op_PartSelect.i16.i26.i32.i32(i26 %add_ln1192, i32 10, i32 25)" [firmware/nnet_utils/nnet_recurrent.h:484]   --->   Operation 81 'partselect' 'h_newstate_V_write_assign' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 82 [1/1] (0.00ns)   --->   "store i16 %h_newstate_V_write_assign, i16* @h_state_V_0, align 2" [firmware/nnet_utils/nnet_recurrent.h:446]   --->   Operation 82 'store' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 83 [1/1] (0.00ns)   --->   "ret i16 %h_newstate_V_write_assign" [firmware/nnet_utils/nnet_recurrent.h:487]   --->   Operation 83 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 3.35ns
+The critical path consists of the following:
+	wire read on port 'data_9_V_read' (firmware/nnet_utils/nnet_recurrent.h:414) [18]  (0 ns)
+	'call' operation ('call_ret1', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450) to 'dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0' [31]  (3.35 ns)
+
+ <State 2>: 4.17ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450) to 'dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0' [31]  (4.17 ns)
+
+ <State 3>: 4.17ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450) to 'dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0' [31]  (4.17 ns)
+
+ <State 4>: 4.17ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450) to 'dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0' [31]  (4.17 ns)
+
+ <State 5>: 4.17ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450) to 'dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0' [31]  (4.17 ns)
+
+ <State 6>: 3.9ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', firmware/nnet_utils/nnet_dense.h:46->firmware/nnet_utils/nnet_recurrent.h:450) to 'dense_latency<ap_fixed,ap_fixed,config2_1>.0.0.0.0' [31]  (3.9 ns)
+
+ <State 7>: 2.08ns
+The critical path consists of the following:
+	'add' operation ('inputacc_zr[0].V', firmware/nnet_utils/nnet_recurrent.h:457) [39]  (2.08 ns)
+
+ <State 8>: 3.16ns
+The critical path consists of the following:
+	'call' operation ('call_ret_i', firmware/nnet_utils/nnet_recr_activations.h:43->firmware/nnet_utils/nnet_recurrent.h:461) to 'sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr>' [41]  (3.16 ns)
+
+ <State 9>: 4.02ns
+The critical path consists of the following:
+	'call' operation ('call_ret_i', firmware/nnet_utils/nnet_recr_activations.h:43->firmware/nnet_utils/nnet_recurrent.h:461) to 'sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr>' [41]  (4.02 ns)
+
+ <State 10>: 4.02ns
+The critical path consists of the following:
+	'call' operation ('call_ret_i', firmware/nnet_utils/nnet_recr_activations.h:43->firmware/nnet_utils/nnet_recurrent.h:461) to 'sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr>' [41]  (4.02 ns)
+
+ <State 11>: 3.25ns
+The critical path consists of the following:
+	'call' operation ('call_ret_i', firmware/nnet_utils/nnet_recr_activations.h:43->firmware/nnet_utils/nnet_recurrent.h:461) to 'sigmoid<ap_fixed,ap_fixed,sigmoid_config2_recr>' [41]  (3.25 ns)
+
+ <State 12>: 3.89ns
+The critical path consists of the following:
+	'mul' operation of DSP[46] ('mul_ln1118', firmware/nnet_utils/nnet_recurrent.h:468) [46]  (3.89 ns)
+
+ <State 13>: 3.89ns
+The critical path consists of the following:
+	'mul' operation of DSP[46] ('mul_ln1118', firmware/nnet_utils/nnet_recurrent.h:468) [46]  (3.89 ns)
+
+ <State 14>: 3.89ns
+The critical path consists of the following:
+	'mul' operation of DSP[57] ('mul_ln1192', firmware/nnet_utils/nnet_recurrent.h:484) [57]  (3.89 ns)
+
+ <State 15>: 2.08ns
+The critical path consists of the following:
+	'add' operation ('inputacc_h[0].V', firmware/nnet_utils/nnet_recurrent.h:475) [48]  (2.08 ns)
+
+ <State 16>: 3.16ns
+The critical path consists of the following:
+	'call' operation ('tmpres_h_0_V', firmware/nnet_utils/nnet_recr_activations.h:55->firmware/nnet_utils/nnet_recurrent.h:479) to 'tanh<ap_fixed,ap_fixed<16,6,5,3,0>,tanh_config2>' [49]  (3.16 ns)
+
+ <State 17>: 4.33ns
+The critical path consists of the following:
+	'call' operation ('tmpres_h_0_V', firmware/nnet_utils/nnet_recr_activations.h:55->firmware/nnet_utils/nnet_recurrent.h:479) to 'tanh<ap_fixed,ap_fixed<16,6,5,3,0>,tanh_config2>' [49]  (4.33 ns)
+
+ <State 18>: 4.33ns
+The critical path consists of the following:
+	'call' operation ('tmpres_h_0_V', firmware/nnet_utils/nnet_recr_activations.h:55->firmware/nnet_utils/nnet_recurrent.h:479) to 'tanh<ap_fixed,ap_fixed<16,6,5,3,0>,tanh_config2>' [49]  (4.33 ns)
+
+ <State 19>: 4.3ns
+The critical path consists of the following:
+	'call' operation ('tmpres_h_0_V', firmware/nnet_utils/nnet_recr_activations.h:55->firmware/nnet_utils/nnet_recurrent.h:479) to 'tanh<ap_fixed,ap_fixed<16,6,5,3,0>,tanh_config2>' [49]  (3.25 ns)
+	'mul' operation of DSP[58] ('mul_ln703', firmware/nnet_utils/nnet_recurrent.h:484) [54]  (1.05 ns)
+
+ <State 20>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[58] ('mul_ln703', firmware/nnet_utils/nnet_recurrent.h:484) [54]  (1.05 ns)
+
+ <State 21>: 3.02ns
+The critical path consists of the following:
+	'mul' operation of DSP[58] ('mul_ln703', firmware/nnet_utils/nnet_recurrent.h:484) [54]  (0 ns)
+	'add' operation of DSP[58] ('add_ln1192', firmware/nnet_utils/nnet_recurrent.h:484) [58]  (3.02 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
