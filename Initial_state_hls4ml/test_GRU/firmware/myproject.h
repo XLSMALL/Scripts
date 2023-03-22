@@ -28,8 +28,8 @@
 
 // Prototype of top level function for C-synthesis
 void myproject(
-    input_t input_1[N_INPUT_1_1*N_INPUT_2_1],
-    result_t layer2_out[N_TIME_STEPS_2*N_OUT_2]
+    input_t input_2[N_INPUT_1_1], input2_t input_1[N_INPUT_1_2*N_INPUT_2_2],
+    result_t layer5_out[N_TIME_STEPS_5*N_OUT_5]
 );
 
 #endif

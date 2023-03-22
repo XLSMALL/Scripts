@@ -7,26 +7,27 @@ import hls4ml
 import os
 os.environ['PATH'] = '/opt/Xilinx/Vivado/2019.2/bin:' + os.environ['PATH']
 
-x_in = tf.random.uniform(shape=[5,10], seed = 17)
-x_in = x_in.numpy()
-# x_in = np.ones((5,10))
-x_in = x_in.reshape((1,5,10))
-inputs2gru =tf.stack([tf.zeros_like(x_in)[:, :, -1]
-            for i in range(2)], axis=-1)
-initial_state = np.ones((1,2))
-initial_state = tf.convert_to_tensor(initial_state, dtype=tf.float32)
-
+# x_in = tf.random.uniform(shape=[5,10], seed = 17)
+# x_in_dense = x_in
+# x_in = x_in.numpy()
+# x_in_dense = x_in_dense.numpy()
+# x_in = x_in.reshape((1,5,10))
+# inputs2gru =tf.stack([tf.zeros_like(x_in)[:, :, -1]
+#             for i in range(2)], axis=-1)
+# initial_state = np.ones((1,2))
+# initial_state = tf.convert_to_tensor(initial_state, dtype=tf.float32)
+# print(x_in[0][0].shape)
 
 
 
 #####test model
 # initializer = tf.keras.initializers.VarianceScaling(distribution='normal')
 # regularizer = tf.keras.regularizers.L2(l=1)
-# inputs2model = x_in # 136, 73, 70
-# inputDim = 136
-# inputs2decoder = tf.stack([tf.zeros_like(inputs2model)[:, :, -1]
-#             for i in range(2)], axis=-1)
-# # inputs2decoder = np.zeros((17,73,64))
+# # inputs2model = x_in # 136, 73, 70
+# # inputDim = 136
+# # inputs2decoder = tf.stack([tf.zeros_like(inputs2model)[:, :, -1]
+# #             for i in range(2)], axis=-1)
+# # # inputs2decoder = np.zeros((17,73,64))
 # def create_model(inputs2model, inputs2decoder, initializer, regularizer):
   
 #   inputLayer =  Input(shape=inputs2model[0].shape)
@@ -42,30 +43,39 @@ initial_state = tf.convert_to_tensor(initial_state, dtype=tf.float32)
 #   x = GRU(2, return_sequences=True, 
 #           time_major=False, kernel_initializer=initializer, 
 #           kernel_regularizer=regularizer, name='decoder_GRU')(input_decoder, initial_state = x)
-#   z = Dense(4, use_bias = False, kernel_regularizer=regularizer, kernel_initializer=initializer, name='dense')(x)
-#   return Model(inputs = [inputLayer,input_decoder], outputs =[x, z])
+# #   z = Dense(4, use_bias = False, kernel_regularizer=regularizer, kernel_initializer=initializer, name='dense')(x)
+# #   return Model(inputs = [inputLayer,input_decoder], outputs =[x, z])
+#   return Model(inputs = [inputLayer,input_decoder], outputs =[x])
 
-# encoder = create_model(inputs2model,inputs2decoder, initializer, regularizer)
+# encoder = create_model(x_in,x_in, initializer, regularizer)
+
+input_shape = (5, 2)  # Shape of the 'inputs' tensor
+batch_size = 1  # Batch size
+inputs_data = np.random.rand(batch_size, *input_shape)
+
+input_dense_shape = (2,)  # Shape of the 'input_dense' tensor
+input_dense_data = np.random.rand(batch_size, *input_dense_shape)
 
 
-
-inputs = Input(shape=x_in[0].shape)
-gru_layer = GRU(units=2, return_sequences=True)(inputs, initial_state=initial_state)
-encoder = tf.keras.Model(inputs=[inputs], outputs=gru_layer)
+inputs = Input(shape=input_shape)
+input_dense = Input(shape=input_dense_shape)
+dense = Dense(2)(input_dense)
+gru_layer = GRU(units=2, return_sequences=True)(inputs, initial_state=dense)
+encoder = tf.keras.Model(inputs=[input_dense,inputs], outputs=gru_layer)
 # print(encoder.layers[1].get_weights()[1].shape)
-np.random.seed(123)
-weight = np.random.rand(10,6) * 0.1
-re_weight = np.random.rand(2,6) * 0.1
-bias = np.random.rand(2,6) * 0.1
-encoder.layers[1].set_weights([weight,re_weight,bias])
+# np.random.seed(123)
+# weight = np.random.rand(10,6) * 0.1
+# re_weight = np.random.rand(2,6) * 0.1
+# bias = np.random.rand(2,6) * 0.1
+# encoder.layers[1].set_weights([weight,re_weight,bias])
 encoder.summary()
 encoder.compile()
-y_out = encoder.predict([x_in])
+y_out = encoder.predict([input_dense_data,inputs_data])
 print("y_out prediction by keras is:")
 print(y_out)
 
-saved_model_name = "/home/xiaohan/ACME_hls4ml/hls4ml/test_GRU/fix_weight_gru.h5"
-encoder.save(saved_model_name)
+# saved_model_name = "/home/xiaohan/ACME_hls4ml/hls4ml/test_GRU/fix_weight_gru.h5"
+# encoder.save(saved_model_name)
 
 config = hls4ml.utils.config_from_keras_model(encoder, granularity='model')
 print("-----------------------------------")
@@ -79,8 +89,8 @@ hls_model = hls4ml.converters.convert_from_keras_model(encoder,
                                                        part='xc7z020clg400-1')
 print("done")
 hls_model.compile()
-hls_out = hls_model.predict(x_in)
-print(hls_out)
+# hls_out = hls_model.predict(x_in)
+# print(hls_out)
 
 
 
