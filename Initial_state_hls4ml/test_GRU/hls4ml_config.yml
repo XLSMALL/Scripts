@@ -1,0 +1,15 @@
+Backend: Vivado
+ClockPeriod: 5
+HLSConfig:
+  Model:
+    Precision: ap_fixed<16,6>
+    ReuseFactor: 1
+    Strategy: Latency
+IOType: io_parallel
+InputData: null
+KerasModel: !keras_model '/home/xiaohan/ACME_hls4ml/hls4ml/test_GRU/keras_model.h5'
+OutputDir: /home/xiaohan/ACME_hls4ml/hls4ml/test_GRU
+OutputPredictions: null
+Part: xc7z020clg400-1
+ProjectName: myproject
+Stamp: F758Bf8d
