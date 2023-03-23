@@ -40,34 +40,25 @@ struct bidirectional_config
     using activation = nnet::activation::relu<x_T, y_T, config_T>;
 };
 
-template<class data_T, class res_T, typename CONFIG_T>
-  void reverse_input(
-      data_T data_in[CONFIG_T::n_sequence*CONFIG_T::n_in],
-      res_T  data_out[CONFIG_T::n_sequence*CONFIG_T::n_in]    
-  ){
-    // for(int i = 0; i < (CONFIG_T::n_sequence*CONFIG_T::n_in); i++){
-    //     data_out[(CONFIG_T::n_sequence*CONFIG_T::n_in)-(1+i)] = data_in[i];
-    // }
-    for (int i=0; i<(CONFIG_T::n_sequence); i++){
-      for(int j=0; j<(CONFIG_T::n_in); j++){
-        data_out[(i*(CONFIG_T::n_in))+j] = data_in[(CONFIG_T::n_sequence-(i+1))*(CONFIG_T::n_in) + j];
-      }
-    }
-  }
+// template<class data_T, class res_T, typename CONFIG_T>
+//   void reverse_input(
+//       data_T data_in[CONFIG_T::n_sequence*CONFIG_T::n_in],
+//       res_T  data_out[CONFIG_T::n_sequence*CONFIG_T::n_in]    
+//   ){
+//     // for(int i = 0; i < (CONFIG_T::n_sequence*CONFIG_T::n_in); i++){
+//     //     data_out[(CONFIG_T::n_sequence*CONFIG_T::n_in)-(1+i)] = data_in[i];
+//     // }
+//     for (int i=0; i<(CONFIG_T::n_sequence); i++){
+//       for(int j=0; j<(CONFIG_T::n_in); j++){
+//         data_out[(i*(CONFIG_T::n_in))+j] = data_in[(CONFIG_T::n_sequence-(i+1))*(CONFIG_T::n_in) + j];
+//       }
+//     }
+//   }
 
 template<class data_T, class res_T, typename CONFIG_T>
   void bidirectional(
       data_T data_in[CONFIG_T::n_sequence*CONFIG_T::n_in],
       res_T  data_out[CONFIG_T::n_out],
-      // res_T  data_out[CONFIG_T::n_state],
-	    // typename CONFIG_T::weight_t     fweight     [CONFIG_T::n_state*3*CONFIG_T::n_in],
-	    // typename CONFIG_T::weight_t     frecweight  [CONFIG_T::n_state*3*CONFIG_T::n_state],
-	    // typename CONFIG_T::bias_t       fbias       [CONFIG_T::n_state*3],
-      // typename CONFIG_T::bias_t       fbias_r     [CONFIG_T::n_state*3],
-      // typename CONFIG_T::weight_t     bweight     [CONFIG_T::n_state*3*CONFIG_T::n_in],
-	    // typename CONFIG_T::weight_t     brecweight  [CONFIG_T::n_state*3*CONFIG_T::n_state],
-	    // typename CONFIG_T::bias_t       bbais       [CONFIG_T::n_state*3],
-      // typename CONFIG_T::bias_t       bbias_r     [CONFIG_T::n_state*3]
 	    typename CONFIG_T::weight_t     bweight     [CONFIG_T::n_state*3*CONFIG_T::n_in],
 	    typename CONFIG_T::weight_t     brecweight  [CONFIG_T::n_state*3*CONFIG_T::n_state],
 	    typename CONFIG_T::bias_t       bbais       [CONFIG_T::n_state*3],
@@ -77,24 +68,30 @@ template<class data_T, class res_T, typename CONFIG_T>
 	    typename CONFIG_T::bias_t       fbias       [CONFIG_T::n_state*3],
       typename CONFIG_T::bias_t       fbias_r     [CONFIG_T::n_state*3]
   ){
-    res_T reverse_in      [CONFIG_T::n_sequence*CONFIG_T::n_in];
+    // res_T reverse_in      [CONFIG_T::n_sequence*CONFIG_T::n_in];
+    data_T temp_reverse    [CONFIG_T::n_sequence*CONFIG_T::n_in];
     res_T  forwardgru_out  [CONFIG_T::n_sequence_out*CONFIG_T::n_state];
     res_T  backwardgru_out [CONFIG_T::n_sequence_out*CONFIG_T::n_state];
-    res_T  temp [CONFIG_T::n_out];
+    // res_T  temp [CONFIG_T::n_out];
     // data_T reverse_in [CONFIG_T::n_sequence*CONFIG_T::n_in];
     // res_T  temp [CONFIG_T::n_state];
-    res_T temp_reverse [CONFIG_T::n_sequence*CONFIG_T::n_in];
+    // res_T temp_reverse [CONFIG_T::n_sequence*CONFIG_T::n_in];
     
     // for(int i=0; i<(CONFIG_T::n_sequence*CONFIG_T::n_in); i++){
     //   reverse_in[i] = data_in[(CONFIG_T::n_sequence*CONFIG_T::n_in) - (i+i)];
     // }
-    res_T temp_bout [CONFIG_T::n_sequence_out*CONFIG_T::n_state];
-
-    nnet::reverse_input<data_T, res_T, CONFIG_T>(data_in, reverse_in);
-
-    for (int i =0; i<(CONFIG_T::n_sequence*CONFIG_T::n_in); i++){
-      temp_reverse[i] = (data_T) reverse_in[i];
+    for (int i=0; i<(CONFIG_T::n_sequence); i++){
+      for(int j=0; j<(CONFIG_T::n_in); j++){
+        temp_reverse[(i*(CONFIG_T::n_in))+j] = data_in[(CONFIG_T::n_sequence-(i+1))*(CONFIG_T::n_in) + j];
+      }
     }
+    // res_T temp_bout [CONFIG_T::n_sequence_out*CONFIG_T::n_state];
+
+    // nnet::reverse_input<data_T, res_T, CONFIG_T>(data_in, reverse_in);
+
+    // for (int i =0; i<(CONFIG_T::n_sequence*CONFIG_T::n_in); i++){
+    //   temp_reverse[i] = (data_T) reverse_in[i];
+    // }
 
     nnet::gru_stack<data_T, res_T, CONFIG_T>(data_in, forwardgru_out, fweight, frecweight, fbias, fbias_r);
     nnet::gru_stack<data_T, res_T, CONFIG_T>(temp_reverse, backwardgru_out, bweight, brecweight, bbais, bbias_r);
@@ -102,9 +99,9 @@ template<class data_T, class res_T, typename CONFIG_T>
     //   data_out[j] = forwardgru_out[j]; // 72*64 + j
 
 
-    for(int i=0; i<(CONFIG_T::n_sequence_out*CONFIG_T::n_state); i++){
-      temp_bout[i] = backwardgru_out[CONFIG_T::n_sequence_out*CONFIG_T::n_state - (i+1)];
-    }
+    // for(int i=0; i<(CONFIG_T::n_sequence_out*CONFIG_T::n_state); i++){
+    //   temp_bout[i] = backwardgru_out[CONFIG_T::n_sequence_out*CONFIG_T::n_state - (i+1)];
+    // }
 
     for(int j=0; j<(CONFIG_T::n_out); j++){
        data_out[j] = forwardgru_out[(CONFIG_T::n_sequence_out-1)* (CONFIG_T::n_state)+j];
